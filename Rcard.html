@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Design</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    max-width: 800px;
+    text-align: left;
+}
+
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0 0 20px;
+}
+
+.card-text {
+    font-size: 1em;
+    color: #555;
+    margin: 0 0 20px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-content">
+                <h2 class="card-title">Subject: A Letter of Motivation for the Ministry of Health Care</h2>
+                <p class="card-text">
+                    Dear Hiring Committee,
+                </p>
+                <p class="card-text">
+                    I am writing to express my deep-seated passion for contributing to the noble mission of the Ministry of Health Care. My name is Usman Zuhair, and I am eager to bring my skills, dedication, and enthusiasm to support the essential work of ensuring the well-being and health of our communities.
+                </p>
+                <p class="card-text">
+                    From an early age, I have been inspired by the transformative impact of healthcare on individuals and societies. Witnessing the resilience of patients, the dedication of healthcare professionals, and the innovation within the field has fueled my determination to be a part of this vital sector.
+                </p>
+                <p class="card-text">
+                    My academic journey has been meticulously crafted to align with this purpose. I pursued a degree in Public Health, immersing myself in topics such as epidemiology, healthcare management, and health policy. Through internships and volunteer experiences, I gained practical insights into the complexities and challenges faced by healthcare systems, further solidifying my commitment to effecting positive change.
+                </p>
+                <p class="card-text">
+                    What drives me most is the opportunity to contribute meaningfully to healthcare accessibility and equity. I believe that every individual deserves access to quality healthcare, regardless of their background or circumstances. This belief has led me to actively engage in community health initiatives, advocating for preventive care, health education, and outreach programs to underserved populations.
+                </p>
+                <p class="card-text">
+                    Moreover, my experience in project management has equipped me with the skills to coordinate and implement initiatives effectively. I am adept at collaborating with diverse teams, leveraging resources efficiently, and adapting strategies to evolving needs—a crucial aspect in the dynamic landscape of healthcare.
+                </p>
+                <p class="card-text">
+                    I am particularly drawn to the vision and initiatives of the Ministry of Health Care. Your commitment to innovation, patient-centered care, and evidence-based practices resonates deeply with my own values and aspirations. I am eager to contribute my expertise in areas such as health promotion, policy development, and program evaluation to support the ministry's mission and drive impactful outcomes.
+                </p>
+                <p class="card-text">
+                    In conclusion, I am thrilled about the prospect of joining the esteemed team at the Ministry of Health Care. I am confident that my blend of academic background, practical experience, and unwavering passion make me a valuable asset in advancing the health and well-being of our communities.
+                </p>
+                <p class="card-text">
+                    Thank you for considering my application. I look forward to the opportunity to contribute to the transformative work of the Ministry of Health Care.
+                </p>
+                <p class="card-text">
+                    Warm regards,<br>
+                    Usman Zuhair
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

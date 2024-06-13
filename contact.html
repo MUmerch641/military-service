@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="Contact form to email.css">
+	<link rel="stylesheet" href="main.css">
+    <style>
+*{
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+body{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #32cd9c;
+}
+.container{
+	font-size: 2rem;
+	width: 650px;
+	background-color: white;
+	border-radius: 5px;
+	padding: 20px;
+	text-align: center;
+}
+.container input{
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-bottom: 2px solid #777777;
+	margin-bottom: 20px;
+	font-size: 16px;
+	outline: none;
+}
+.btn{
+	border: none !important;
+	cursor: pointer;
+	background-color: #32cd9c;
+	margin: 15px 0;
+	font-size: 2rem;
+	width: 100%;
+	padding: 14px;
+}
+.btn:hover{
+	background-color: #1f7d5f;
+	color: white;
+}
+
+    </style>
+</head>
+<body>
+	<nav>
+		<ul class="sidebar" >
+		  <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+		  <li><a href="./home.html">Home</a></li>
+		  <li><a href="./Team.html">Team</a></li>
+		  <li><a href="./index.html">Qasim</a></li>
+		  <li><a href="./hizbullah.html">Hazbullah</a></li>
+		  <li><a href="./aleena.html">Aleena</a></li>
+		  <li><a href="./contact.html">Login</a></li>
+		</ul>
+		<ul >
+		  <li><a href="#">Military services</a></li>
+		  <li class="hideOnMobile"><a href="/home.html">Home</a></li>
+		  <li class="hideOnMobile"><a href="./Team.html">Team</a></li>
+		  <li class="hideOnMobile"><a href="./index.html">Qasim</a></li>
+		  <li class="hideOnMobile"><a href="./hizbullah.html">Hazbullah</a></li>
+		  <li class="hideOnMobile"><a href="./aleena.html">Aleena</a></li>
+		  <li class="hideOnMobile"><a href="./contact.html">Login</a></li>
+		  <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+		</ul>
+	  </nav>
+	<div class="container">
+		<h2>Get in Touch</h2>
+		<form onsubmit="emailSend(); reset(); return false;">
+			<input type="text" id="name" placeholder="name" name="name" required>
+			<input type="text" id="phone" placeholder="phone" name="phone" required>
+			<input type="email" id="email" placeholder="email" name="email" required>
+			<button type="submit" class="btn">submit</button>
+		</form>
+	</div> 
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+	<script src="Contact form to email.js">
+
+function emailSend(){
+
+	var userName = document.getElementById('name').value;
+	var phone = document.getElementById('phone').value;
+	var email = document.getElementById('email').value;
+
+	var messageBody = "Name " + userName +
+	"<br/> Phone " + phone +
+	"<br/> Email " + email;
+	Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "host@gmail.com",
+    Password : "Password",
+    To : 'choudhry00641@gmail.com',
+    From : "website@gmail.com",
+    Subject : "This is the subject",
+    Body : messageBody
+}).then(
+  message => {
+  	if(message=='OK'){
+  		swal("Secussful", "You clicked the button!", "success");
+  	}
+  	else{
+  		swal("Error", "You clicked the button!", "error");
+  	}
+  }
+);
+}
+
+    </script>
+	
+</body>
+</html>
